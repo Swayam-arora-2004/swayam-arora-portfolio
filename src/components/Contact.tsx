@@ -162,9 +162,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           {/* Contact Information */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 lg:gap-8">
             <div className="animate-slide-up">
               <h3 className="text-2xl font-bold mb-6 text-foreground">
                 Contact Information
@@ -252,8 +252,8 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="animate-slide-up flex flex-col" style={{ animationDelay: "0.3s", marginTop: "1.4cm", height: "calc(100% - 1.4cm)" }}>
-            <Card className="glass-card p-8 flex flex-col flex-1 h-full">
+          <div className="animate-slide-up flex flex-col lg:mt-[1.4cm]" style={{ animationDelay: "0.3s" }}>
+            <Card className="glass-card p-4 sm:p-6 lg:p-8 flex flex-col flex-1 lg:h-full">
               <h3 className="text-2xl font-bold mb-6 text-foreground">
                 Send a Message
               </h3>
