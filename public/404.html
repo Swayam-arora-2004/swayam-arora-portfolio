@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=./" />
+    <script type="text/javascript">
+      (function(l) {
+        // GitHub project pages: keep root path
+        var pathSegmentsToKeep = 0;
+        var path = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/';
+        var newUrl = l.protocol + '//' + l.host + path + '?p=' +
+          l.pathname.slice(path.length).replace(/\//g, '\u002f') +
+          (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash;
+        l.replace(newUrl);
+      })(window.location);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
