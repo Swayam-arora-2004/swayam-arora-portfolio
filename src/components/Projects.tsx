@@ -15,6 +15,8 @@ const Projects = () => {
       image: "/Financial_Market_Dashboard.png",
       description: "Integrated 10+ stock market & crypto APIs to track price trends, trading volume, and sector performance. Delivered insights that could simulate portfolio performance with 95% data accuracy.",
       techStack: ["Power BI", "SQL", "Python", "APIs"],
+      githubUrl: "https://github.com/example", // Update with your GitHub repository URL
+      demoUrl: "https://example.com", // Update with your demo/live project URL (optional)
       caseStudy: {
         problem: "Need for real-time financial market insights and portfolio performance tracking across multiple asset classes.",
         approach: "Integrated multiple APIs, built ETL pipelines, and created interactive visualizations with automated data refresh.",
@@ -29,6 +31,8 @@ const Projects = () => {
       image: "/Customer_Churn_Prediction.png",
       description: "Built a machine learning model using Logistic Regression, Random Forest, and XGBoost to predict customer churn with 90% accuracy. Created a dashboard visualization that translated predictions into business actions.",
       techStack: ["Python", "Scikit-learn", "XGBoost", "Pandas", "Matplotlib"],
+      githubUrl: "https://github.com/example", // Update with your GitHub repository URL
+      demoUrl: "https://example.com", // Update with your demo/live project URL (optional)
       caseStudy: {
         problem: "High customer churn rates without predictive insights for proactive retention strategies.",
         approach: "Analyzed customer data, engineered features, compared multiple ML algorithms, and built an interpretable model.",
@@ -43,6 +47,8 @@ const Projects = () => {
       image: "/Submission_Triage_for_Motor_Insurance.png",
       description: "Developed an automated submission triage solution for motor insurance data, integrating real-time pipelines and classification model comparison.",
       techStack: ["Python", "Kafka", "KSQLDB", "Machine Learning"],
+      githubUrl: "https://github.com/example", // Update with your GitHub repository URL
+      demoUrl: "https://example.com", // Update with your demo/live project URL (optional)
       caseStudy: {
         problem: "Inefficient manual triage of motor insurance submissions leading to delays in underwriting and inconsistent risk assessment.",
         approach: "Performed detailed EDA using Python, built a real-time data preprocessing pipeline using Kafka & KSQLDB, and compared multiple classification models to determine the best-performing approach for real-world submission classification.",
@@ -119,36 +125,40 @@ const Projects = () => {
 
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-4 pt-4">
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="glass-card"
-                        asChild
-                      >
-                        <a 
-                          href="https://github.com/example" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
+                      {project.githubUrl && (
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="glass-card"
+                          asChild
                         >
-                          <Github className="w-4 h-4 mr-2" />
-                          GitHub
-                        </a>
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="glass-card"
-                        asChild
-                      >
-                        <a 
-                          href="https://example.com" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
+                          <a 
+                            href={project.githubUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            GitHub
+                          </a>
+                        </Button>
+                      )}
+                      {project.demoUrl && (
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="glass-card"
+                          asChild
                         >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Demo
-                        </a>
-                      </Button>
+                          <a 
+                            href={project.demoUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Demo
+                          </a>
+                        </Button>
+                      )}
                       <Button
                         variant="ghost"
                         size="sm"
