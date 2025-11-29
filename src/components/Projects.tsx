@@ -99,15 +99,13 @@ const Projects = () => {
 
                   {/* Project Details */}
                   <div className="flex-1 lg:w-2/3 space-y-4">
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <h3 className="text-2xl font-bold mb-2 text-foreground">
-                          {project.title}
-                        </h3>
-                        <p className="text-primary font-medium mb-4">
-                          {project.tagline}
-                        </p>
-                      </div>
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2 text-foreground">
+                        {project.title}
+                      </h3>
+                      <p className="text-primary font-medium mb-4">
+                        {project.tagline}
+                      </p>
                     </div>
 
                     <p className="text-muted-foreground leading-relaxed">
