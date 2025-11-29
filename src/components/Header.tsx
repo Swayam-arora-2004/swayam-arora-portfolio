@@ -24,7 +24,7 @@ const Header = () => {
     try {
       // Create a link element to trigger download
       const link = document.createElement('a');
-      link.href = './public/Swayam_Arora_DataAnalyst_Resume.pdf';
+      link.href = '/Swayam_Arora_DataAnalyst_Resume.pdf';
       link.download = 'Swayam_Arora_DataAnalyst_Resume.pdf';
       document.body.appendChild(link);
       link.click();

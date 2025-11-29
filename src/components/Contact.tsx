@@ -71,11 +71,11 @@ const Contact = () => {
     setIsSubmitting(true);
     
     // API URL - works for both development and production
-    // In production on Vercel, this will use the same domain
-    // For GitHub Pages, set VITE_API_URL to your Vercel backend URL
-    const apiUrl = import.meta.env.VITE_API_URL 
-     ? `${import.meta.env.VITE_API_URL}/api/contact`
-     : 'https://swayam-arora-portfolio.vercel.app/api/contact'; // Your Vercel URL
+    // In production on Vercel, use the same domain
+    // In development, use the proxy
+    const apiUrl = import.meta.env.PROD 
+      ? '/api/contact'  // Same domain on Vercel
+      : '/api/contact'; // Proxy in development
     
     try {
       const response = await fetch(apiUrl, {
@@ -124,8 +124,8 @@ const Contact = () => {
     try {
       // Create a link element to trigger download
       const link = document.createElement('a');
-      link.href = './public/Swayam_Arora_DataAnalytics_Resume.pdf';
-      link.download = 'Swayam_Arora_DataAnalytics_Resume.pdf';
+      link.href = '/Swayam_Arora_DataAnalyst_Resume.pdf';
+      link.download = 'Swayam_Arora_DataAnalyst_Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

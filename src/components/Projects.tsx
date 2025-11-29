@@ -12,7 +12,7 @@ const Projects = () => {
       id: 1,
       title: "Financial Market Dashboard",
       tagline: "Interactive market & crypto dashboard",
-      image: "./public/Financial_Market_Dashboard.png",
+      image: "/Financial_Market_Dashboard.png",
       description: "Integrated 10+ stock market & crypto APIs to track price trends, trading volume, and sector performance. Delivered insights that could simulate portfolio performance with 95% data accuracy.",
       techStack: ["Power BI", "SQL", "Python", "APIs"],
       caseStudy: {
@@ -26,7 +26,7 @@ const Projects = () => {
       id: 2,
       title: "Customer Churn Prediction",
       tagline: "Predictive model for churn",
-      image: "./public/Customer_Churn_Prediction.png",
+      image: "/Customer_Churn_Prediction.png",
       description: "Built a machine learning model using Logistic Regression, Random Forest, and XGBoost to predict customer churn with 90% accuracy. Created a dashboard visualization that translated predictions into business actions.",
       techStack: ["Python", "Scikit-learn", "XGBoost", "Pandas", "Matplotlib"],
       caseStudy: {
@@ -40,7 +40,7 @@ const Projects = () => {
       id: 3,
       title: "Submission Triage for Motor Insurance – Comparison of Classification Models",
       tagline: "Automated submission triage solution with real-time pipelines",
-      image: "./public/Submission_Triage_for_Motor_Insurance.png",
+      image: "/Submission_Triage_for_Motor_Insurance.png",
       description: "Developed an automated submission triage solution for motor insurance data, integrating real-time pipelines and classification model comparison.",
       techStack: ["Python", "Kafka", "KSQLDB", "Machine Learning"],
       caseStudy: {
