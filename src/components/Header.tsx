@@ -20,6 +20,11 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsMenuOpen(false);
+  };
+
   const downloadResume = () => {
     try {
       // Create a link element to trigger download
@@ -39,9 +44,13 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-xl font-bold gradient-text">
+          <button
+            onClick={scrollToTop}
+            className="text-xl font-bold gradient-text hover:opacity-80 transition-opacity cursor-pointer"
+            aria-label="Go to home"
+          >
             Swayam A.
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
