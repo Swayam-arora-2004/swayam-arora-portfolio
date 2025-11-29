@@ -1,15 +1,7 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import { createClient } from '@supabase/supabase-js';
 import nodemailer from 'nodemailer';
+import { createClient } from '@supabase/supabase-js';
 
-// Load environment variables
-dotenv.config();
-
-const app = express();
-
-// Initialize Supabase client (optional - only if using Supabase)
+// Initialize Supabase client (optional)
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 let supabase = null;
@@ -31,25 +23,32 @@ if (process.env.EMAIL_USER && process.env.EMAIL_APP_PASSWORD) {
   });
 }
 
-// Middleware
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:5173',
-    'http://localhost:8080',
-    'https://swayam-arora-2004.github.io',
-    /\.github\.io$/,
-    /\.vercel\.app$/,
-    /\.netlify\.app$/
-  ],
-  credentials: true
-}));
+// CORS headers
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+export default async function handler(req, res) {
+  // Handle CORS preflight
+  if (req.method === 'OPTIONS') {
+    return res.status(200).json({}).end();
+  }
 
-// POST /api/contact - Handle contact form submission
-app.post('*', async (req, res) => {
+  // Set CORS headers
+  Object.keys(corsHeaders).forEach(key => {
+    res.setHeader(key, corsHeaders[key]);
+  });
+
+  // Only allow POST requests
+  if (req.method !== 'POST') {
+    return res.status(405).json({
+      success: false,
+      error: 'Method not allowed'
+    });
+  }
+
   try {
     const { name, email, message } = req.body;
 
@@ -154,28 +153,16 @@ ${message.trim()}
       });
     }
 
-    res.status(201).json({
+    return res.status(201).json({
       success: true,
       message: 'Contact form submitted successfully. You will receive an email notification shortly.',
       data: savedData
     });
   } catch (err) {
     console.error('Server error:', err);
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       error: 'Internal server error'
     });
   }
-});
-
-// Health check
-app.get('*', (req, res) => {
-  res.json({ 
-    success: true, 
-    message: 'Contact API is running',
-    timestamp: new Date().toISOString()
-  });
-});
-
-// Export for Vercel serverless function
-export default app;
+}
