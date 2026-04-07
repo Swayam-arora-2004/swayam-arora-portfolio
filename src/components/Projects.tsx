@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,7 +7,11 @@ import { ChevronDown, ChevronUp, ExternalLink, Github, Image } from "lucide-reac
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
 
-  const projects = [
+  const [projects, setProjects] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Hardcoded fallback data
+  const fallbackProjects = [
     {
       id: 1,
       title: "AI-Enabled ERP Dashboard System",
@@ -57,6 +61,42 @@ const Projects = () => {
       }
     }
   ];
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const apiUrl = import.meta.env.PROD ? '/api/projects' : '/api/projects';
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error('Failed to fetch projects');
+        
+        const result = await response.json();
+        if (result.success && result.data && result.data.length > 0) {
+          // Map database fields to component fields
+          const mappedData = result.data.map((p: any) => ({
+            id: p.id,
+            title: p.title,
+            tagline: p.tagline,
+            description: p.description,
+            image: p.image_url,
+            techStack: p.tech_stack || [],
+            githubUrl: p.github_link,
+            demoUrl: p.demo_url,
+            caseStudy: p.case_study || {}
+          }));
+          setProjects(mappedData);
+        } else {
+          setProjects(fallbackProjects);
+        }
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+        setProjects(fallbackProjects);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   const toggleExpanded = (projectId: number) => {
     setExpandedProject(expandedProject === projectId ? null : projectId);

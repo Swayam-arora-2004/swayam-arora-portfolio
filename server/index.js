@@ -139,9 +139,11 @@ app.post('/api/contact', async (req, res) => {
         .select();
 
       if (error) {
-        console.error('Supabase error (non-critical):', error);
+        console.error('❌ Supabase insert error:', error.message);
       } else {
-        savedData = data[0];
+        console.log('✅ Message saved to Supabase contacts table');
+        // Fallback to a simple success object if select() returns nothing (due to RLS)
+        savedData = (data && data.length > 0) ? data[0] : { id: 'saved' };
       }
     } catch (dbError) {
       console.error('Database save error (non-critical):', dbError);
@@ -201,9 +203,21 @@ ${message.trim()}
       console.log('✅ Email sent successfully to', recipientEmail);
     } catch (emailError) {
       console.error('❌ Email sending error:', emailError);
+      
+      // If we already saved to the database, don't return a 500 error to the user
+      // Instead, return a 201 with a warning message
+      if (savedData) {
+        return res.status(201).json({
+          success: true,
+          message: 'Message saved to database, but email notification failed.',
+          warning: 'Email configuration error. Please contact the administrator.',
+          data: savedData
+        });
+      }
+
       return res.status(500).json({
         success: false,
-        error: 'Failed to send email notification'
+        error: `Failed to send email notification: ${emailError.message}`
       });
     }
 

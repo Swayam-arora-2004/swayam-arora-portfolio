@@ -92,9 +92,15 @@ const Contact = () => {
 
       // Check if response is ok before parsing JSON
       if (!response.ok) {
-        const errorText = await response.text();
-        console.error('API Error:', errorText);
-        throw new Error(`Server error: ${response.status}`);
+        let errorMessage = `Server error: ${response.status}`;
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.error || errorMessage;
+        } catch (e) {
+          // Fallback to text if JSON parsing fails
+        }
+        console.error('API Error:', errorMessage);
+        throw new Error(errorMessage);
       }
 
       const data = await response.json();
