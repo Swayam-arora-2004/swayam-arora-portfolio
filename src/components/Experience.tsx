@@ -1,30 +1,33 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Briefcase } from "lucide-react";
+import { MapPin, Calendar, Briefcase, GraduationCap } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
-      company: "MCT India Infotech",
-      role: "DevOps Intern",
-      period: "06/2025 - 08/2025",
-      location: "Remote",
+      company: "MCT India Infotech Pvt. Ltd.",
+      role: "Intern",
+      period: "June 2025 – August 2025",
+      location: "Delhi, India",
       achievements: [
-        "Built and optimized frontend components in React.js, improving UI responsiveness and user experience.",
-        "Gained hands-on exposure to Kubernetes architecture, understanding container orchestration and deployment pipelines."
+        "Analysed system and application logs to identify performance bottlenecks and failure patterns.",
+        "Performed data-driven monitoring analysis to optimise system performance and reduce downtime indicators.",
+        "Created KPI-based reports and dashboards for tracking system health, uptime, and resource utilization.",
+        "Automated data extraction and preprocessing pipelines using Python, improving analysis efficiency by ~20-25%."
       ],
-      skills: ["React.js", "Kubernetes", "DevOps", "Frontend Development"]
+      skills: ["Log Analysis", "Python", "KPI Dashboards", "System Monitoring", "Automation"]
     },
     {
       company: "CodersCave",
       role: "Data Science Intern",
-      period: "06/2024 - 07/2024",
+      period: "June 2024 – July 2024",
       location: "Remote",
       achievements: [
-        "Collaborated on a team to develop 3+ data models for predictive analysis using machine learning algorithms, achieving an average accuracy improvement of 15%.",
-        "Cleaned, pre-processed, and analyzed datasets of over 500,000 data points, improving data processing speed by 25%."
+        "Cleaned and analysed 100K+ records using Python (Pandas), improving data processing efficiency by 25%.",
+        "Performed exploratory data analysis (EDA) to identify trends, anomalies, and data quality issues.",
+        "Built reproducible Jupyter notebooks and documented end-to-end data workflows."
       ],
-      skills: ["Python", "Machine Learning", "Data Preprocessing", "Predictive Analysis"]
+      skills: ["Python", "Pandas", "EDA", "Jupyter Notebooks", "Data Analysis"]
     }
   ];
 
@@ -33,7 +36,7 @@ const Experience = () => {
       institution: "Manav Rachna University",
       degree: "B.Tech. Computer Science & Technology",
       period: "2022–2026",
-      grade: "CPI: 7.06"
+      grade: "CGPA: 7.39"
     },
     {
       institution: "Vidya Mandir Public School",
@@ -58,17 +61,17 @@ const Experience = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="flex flex-col gap-16 max-w-4xl mx-auto">
           {/* Work Experience */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold mb-6 flex items-center">
               <Briefcase className="w-6 h-6 mr-3 text-primary" />
               Internships & Experience
             </h3>
-            
+
             {experiences.map((exp, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="glass-card hover-glow p-6 animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
@@ -116,13 +119,13 @@ const Experience = () => {
           {/* Education */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold mb-6 flex items-center">
-              <Briefcase className="w-6 h-6 mr-3 text-primary" />
+              <GraduationCap className="w-6 h-6 mr-3 text-primary" />
               Education
             </h3>
-            
+
             {education.map((edu, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="glass-card hover-glow p-6 animate-slide-up"
                 style={{ animationDelay: `${(index + 2) * 0.2}s` }}
               >

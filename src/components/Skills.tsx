@@ -4,33 +4,33 @@ import { Badge } from "@/components/ui/badge";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Programming Languages",
-      skills: ["Python", "C/C++"],
+      category: "Programming",
+      skills: ["Python (Pandas, NumPy)", "SQL"],
       tier: "primary"
     },
     {
-      category: "Data Analysis",
-      skills: ["Pandas", "NumPy", "SQL"],
+      category: "Data Analysis & Processing",
+      skills: ["Exploratory Data Analysis (EDA)", "Data Cleaning", "Data Wrangling", "Data Preprocessing", "Feature Engineering", "Statistical Analysis"],
       tier: "primary"
     },
     {
-      category: "Data Visualization",
-      skills: ["Power BI", "Tableau", "Matplotlib", "Seaborn"],
+      category: "Visualisation",
+      skills: ["Power BI", "Tableau", "Matplotlib", "Seaborn", "Business Intelligence (BI)", "Dashboard Development"],
       tier: "primary"
     },
     {
-      category: "Developer Tools",
-      skills: ["VS Code", "Git", "GitHub", "MS Excel"],
+      category: "Tools",
+      skills: ["Advanced Excel", "Git", "Jupyter Notebook", "VS Code"],
       tier: "secondary"
     },
     {
-      category: "Concepts",
-      skills: ["Data Structures", "Algorithms", "OOP", "Data pipeline optimization"],
+      category: "Databases",
+      skills: ["MySQL", "Relational Database Management Systems (RDBMS)", "Data Query Optimisation"],
       tier: "secondary"
     },
     {
-      category: "AI & Tools",
-      skills: ["ChatGPT", "Trifacta", "Microsoft Fabric", "Zapier", "Koyfin", "H2O.ai", "Cursor", "Copilot"],
+      category: "AI & Productivity",
+      skills: ["AI-assisted Data Analysis", "Prompt Engineering", "Workflow Automation", "Insight Generation using LLMs"],
       tier: "secondary"
     },
     {

@@ -7,7 +7,7 @@ const Footer = () => {
             Made by Swayam Arora
           </p>
           <p className="text-sm text-muted-foreground">
-            © 2025 All rights reserved.
+            © 2026 All rights reserved.
           </p>
         </div>
       </div>

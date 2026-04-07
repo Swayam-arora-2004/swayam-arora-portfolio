@@ -10,50 +10,50 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Financial Market Dashboard",
-      tagline: "Interactive market & crypto dashboard",
-      image: "/Financial_Market_Dashboard.png",
-      description: "Integrated 10+ stock market & crypto APIs to track price trends, trading volume, and sector performance. Delivered insights that could simulate portfolio performance with 95% data accuracy.",
-      techStack: ["Power BI", "SQL", "Python", "APIs"],
-      githubUrl: "https://github.com/example", // Update with your GitHub repository URL
-      demoUrl: "https://example.com", // Update with your demo/live project URL (optional)
+      title: "AI-Enabled ERP Dashboard System",
+      tagline: "Final Year Project | AI/LLMs & SQL",
+      image: "/erp_dashboard.jpg",
+      description: "Led the development of AI-powered modules for an ERP system, focusing on automating complex workflows using LLM APIs. Integrated face recognition for secure and fast data retrieval.",
+      techStack: ["AI/LLMs", "SQL", "Python", "React", "APIs"],
+      githubUrl: "https://github.com/Swayam-arora-2004/mru-cst-dashboard",
+      demoUrl: "https://mru-cst-dashboard-gamma.vercel.app/",
       caseStudy: {
-        problem: "Need for real-time financial market insights and portfolio performance tracking across multiple asset classes.",
-        approach: "Integrated multiple APIs, built ETL pipelines, and created interactive visualizations with automated data refresh.",
-        result: "95% data accuracy with real-time updates, enabling informed investment decisions.",
-        learned: "API integration, real-time data processing, and financial data visualization best practices."
+        problem: "Manual administrative tasks and slow data retrieval in traditional ERP systems causing operational bottlenecks.",
+        approach: "Built AI-assisted course code generation and an LLM-based grading system. Integrated face recognition APIs for automated attendance and secure access.",
+        result: "Reduced manual effort by ~80% in code generation, decreased evaluation time by ~60%, and improved data retrieval speed by ~70%.",
+        learned: "LLM API orchestration, prompt engineering for structured outputs, and integrating biometric authentication in web dashboards."
       }
     },
     {
       id: 2,
-      title: "Customer Churn Prediction",
-      tagline: "Predictive model for churn",
-      image: "/Customer_Churn_Prediction.png",
-      description: "Built a machine learning model using Logistic Regression, Random Forest, and XGBoost to predict customer churn with 90% accuracy. Created a dashboard visualization that translated predictions into business actions.",
-      techStack: ["Python", "Scikit-learn", "XGBoost", "Pandas", "Matplotlib"],
-      githubUrl: "https://github.com/example", // Update with your GitHub repository URL
-      demoUrl: "https://example.com", // Update with your demo/live project URL (optional)
+      title: "Customer Churn Analysis",
+      tagline: "Predictive Insights for Retention",
+      image: "/churn_analysis.jpg",
+      description: "Conducted a deep-dive analysis into customer behavior patterns to predict churn. Utilized advanced EDA and feature engineering to identify critical risk factors.",
+      techStack: ["Python", "SQL", "Pandas", "Scikit-learn", "EDA"],
+      githubUrl: "https://github.com/Swayam-arora-2004/Customer-Churn-Prediction",
+      demoUrl: "https://example.com",
       caseStudy: {
-        problem: "High customer churn rates without predictive insights for proactive retention strategies.",
-        approach: "Analyzed customer data, engineered features, compared multiple ML algorithms, and built an interpretable model.",
-        result: "90% prediction accuracy with actionable insights for customer retention strategies.",
-        learned: "Feature engineering, model comparison, and translating ML insights into business actions."
+        problem: "Increasing customer turnover with no clear understanding of the underlying behavioral drivers or high-risk segments.",
+        approach: "Analyzed 10K+ records using Python. Performed extensive EDA and engineered features to capture multi-dimensional customer interaction patterns.",
+        result: "Identified 3 high-risk customer segments, enabling targeted retention strategies that improved retention by ~15-20%.",
+        learned: "Advanced feature engineering, translating statistical findings into business segments, and the impact of data cleaning on model reliability."
       }
     },
     {
       id: 3,
-      title: "Submission Triage for Motor Insurance – Comparison of Classification Models",
-      tagline: "Automated submission triage solution with real-time pipelines",
-      image: "/Submission_Triage_for_Motor_Insurance.png",
-      description: "Developed an automated submission triage solution for motor insurance data, integrating real-time pipelines and classification model comparison.",
-      techStack: ["Python", "Kafka", "KSQLDB", "Machine Learning"],
-      githubUrl: "https://github.com/example", // Update with your GitHub repository URL
-      demoUrl: "https://example.com", // Update with your demo/live project URL (optional)
+      title: "Retail Sales Analysis",
+      tagline: "Optimizing Product Strategy & ROI",
+      image: "/retail_sales.jpg",
+      description: "Analyzed large-scale retail transaction data to optimize product performance and revenue growth. Focused on SQL optimization for handling large datasets efficiently.",
+      techStack: ["SQL", "Excel", "Python", "Data Analysis"],
+      githubUrl: "https://github.com/Swayam-arora-2004/Retail-Sales-Analysis",
+      demoUrl: "https://example.com",
       caseStudy: {
-        problem: "Inefficient manual triage of motor insurance submissions leading to delays in underwriting and inconsistent risk assessment.",
-        approach: "Performed detailed EDA using Python, built a real-time data preprocessing pipeline using Kafka & KSQLDB, and compared multiple classification models to determine the best-performing approach for real-world submission classification.",
-        result: "Achieved a scalable and automated triage workflow, selecting the most accurate model for classifying incoming submissions and significantly improving underwriting speed and decision quality.",
-        learned: "Real-time data engineering, event-driven pipelines, model comparison strategies, and applying machine learning to insurance domain workflows."
+        problem: "Inability to identify top-performing product categories and slow performance of reporting queries on large transaction datasets.",
+        approach: "Analyzed 50K+ transactions using optimized SQL queries. Applied the 80/20 rule to identify revenue-driving segments and visualized trends in Excel.",
+        result: "Identified that the top 10% of products contributed to ~60% of total revenue. Improved query performance by optimizing table joins and indexing.",
+        learned: "SQL query optimization, large-scale data aggregation, and using the Pareto principle for strategic business insights."
       }
     }
   ];
@@ -80,20 +80,29 @@ const Projects = () => {
               <div className="p-4 sm:p-6 lg:p-8">
                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
                   {/* Project Image */}
-                  <div className="flex-shrink-0 w-full lg:w-[400px] mx-auto lg:mx-0">
-                    <div className="w-full h-[250px] sm:h-[300px] lg:w-[400px] lg:h-[300px] bg-gradient-card rounded-lg overflow-hidden border border-border mx-auto lg:mx-0">
-                      {project.image ? (
-                        <img 
-                          src={project.image} 
-                          alt={project.title}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <Image className="w-12 h-12 text-muted-foreground" />
-                        </div>
-                      )}
+                  <div className="flex-shrink-0 w-full lg:w-[320px] mx-auto lg:mx-0">
+                    <div className="w-full bg-gradient-card rounded-xl overflow-hidden border border-border/50 shadow-2xl mx-auto lg:mx-0 group">
+                      {/* Browser Header */}
+                      <div className="bg-muted/30 px-4 py-2 border-b border-border/30 flex items-center gap-1.5">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-amber-500/50" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/50" />
+                      </div>
+                      
+                      <div className="aspect-[4/3] relative overflow-hidden bg-background/50">
+                        {project.image ? (
+                          <img 
+                            src={project.image} 
+                            alt={project.title}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center">
+                            <Image className="w-12 h-12 text-muted-foreground/30" />
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
 
@@ -124,15 +133,15 @@ const Projects = () => {
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-4 pt-4">
                       {project.githubUrl && (
-                        <Button 
-                          variant="outline" 
-                          size="sm" 
+                        <Button
+                          variant="outline"
+                          size="sm"
                           className="glass-card"
                           asChild
                         >
-                          <a 
-                            href={project.githubUrl} 
-                            target="_blank" 
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
                             rel="noopener noreferrer"
                           >
                             <Github className="w-4 h-4 mr-2" />
@@ -141,15 +150,15 @@ const Projects = () => {
                         </Button>
                       )}
                       {project.demoUrl && (
-                        <Button 
-                          variant="outline" 
-                          size="sm" 
+                        <Button
+                          variant="outline"
+                          size="sm"
                           className="glass-card"
                           asChild
                         >
-                          <a 
-                            href={project.demoUrl} 
-                            target="_blank" 
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
                             rel="noopener noreferrer"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />

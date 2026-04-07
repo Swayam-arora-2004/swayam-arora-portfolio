@@ -1,37 +1,37 @@
-# Swayam Arora | Data Analyst Portfolio
+# Swayam Arora | Data Scientist Portfolio
 
-A modern, responsive portfolio website showcasing my work as a Data Analyst. Built with React, TypeScript, and Vite, featuring a sleek dark theme with teal accents.
+A modern, responsive portfolio website showcasing my work as a Data Scientist. Built with React, TypeScript, and Vite, featuring a sleek dark theme with teal accents and a focus on AI-driven solutions and technical data analysis.
 
 ## 🌟 Features
 
 - **Modern UI/UX**: Glassmorphism design with smooth animations
+- **AI-Powered Project Showcase**: Detailed case studies for AI, Machine Learning, and Data Analysis projects
+- **Quantitative Performance Metrics**: Showcasing real-world impact (e.g., 80% automation, 60% time reduction)
 - **Responsive Design**: Works seamlessly on all devices
 - **Contact Form**: Functional contact form with email notifications
-- **Project Showcase**: Display of data analysis projects with images
-- **Skills Section**: Comprehensive technical skills display
-- **Experience & Education**: Professional timeline
-- **Publications**: Research papers and achievements
+- **Skills Section**: Comprehensive technical skills display categorized by expertise (EDA, ML, Visualisation, etc.)
+- **Experience & Education**: Professional timeline with detailed achievement highlights
+- **Publications**: Research papers, awards, and certifications
 - **Resume Download**: Direct PDF download functionality
 
 ## 🚀 Tech Stack
 
+- **Data Science**: Python, SQL, Pandas, Scikit-learn, XGBoost, AI/LLMs
+- **Visualisation**: Power BI, Tableau, Matplotlib, Seaborn
 - **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, CSS Variables
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
+- **Styling**: Tailwind CSS, Lucide Icons
 - **Backend**: Node.js, Express
 - **Email**: Nodemailer (Gmail)
-- **Deployment**: Vercel
 
 ## 📋 Sections
 
-- **Hero**: Introduction with key metrics
-- **About**: Personal introduction and highlights
-- **Projects**: Featured data analysis projects
-- **Skills**: Technical skills categorized by expertise
-- **Experience**: Internships and work experience
-- **Publications**: Research papers and certifications
-- **Contact**: Contact form with email integration
+- **Hero**: Introduction with a focus on Data Science and AI
+- **About**: Personal introduction and professional highlights
+- **Projects**: Featured high-impact projects with metrics and case studies
+- **Skills**: Technical toolkit (Programming, Analysis, Databases, AI, etc.)
+- **Experience**: Detailed professional journey and internships
+- **Publications**: Research papers, hackathon awards, and certifications
+- **Contact**: Integrated contact form and professional links
 
 ## 🛠️ Setup & Installation
 

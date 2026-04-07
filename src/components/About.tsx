@@ -39,12 +39,20 @@ const About = () => {
           <div className="animate-slide-up">
             <Card className="glass-card p-6 sm:p-8 h-full">
               <div className="prose prose-lg prose-invert max-w-none">
-                <p className="text-lg leading-relaxed text-foreground">
-                  Hi — I'm <span className="gradient-text font-semibold">Swayam Arora</span>, 
-                  an aspiring Data Analyst and B.Tech (CSE) student at Manav Rachna University. 
-                  I learn by building practical projects in Python, SQL, web, and hardware. 
-                  I focus on clear results, reproducible code, and solving business problems.
-                </p>
+                <div className="space-y-6 text-lg leading-relaxed text-foreground">
+                  <p>
+                    Hi — I'm <span className="gradient-text font-semibold">Swayam Arora</span>,
+                    an aspiring Data Scientist. I build practical, data-driven solutions using Python, SQL, machine learning, Excel, Power BI, and AI tools, with a focus on solving real business problems.
+                  </p>
+
+                  <p>
+                    I have experience working with large datasets (100K+ records), performing EDA, statistical analysis, ML modelling, and dashboard development, along with automating workflows to improve efficiency. My projects span AI-powered ERP systems, customer churn analysis, retail sales insights, and time-series analysis, all centred on measurable outcomes and clean, reproducible code.
+                  </p>
+
+                  <p>
+                    I'm currently seeking opportunities in Data Science, Machine Learning, and AI to build scalable, high-impact solutions.
+                  </p>
+                </div>
               </div>
             </Card>
           </div>

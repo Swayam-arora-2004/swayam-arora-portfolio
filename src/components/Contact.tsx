@@ -69,14 +69,14 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // API URL - works for both development and production
     // In production on Vercel, use the same domain
     // In development, use the proxy
-    const apiUrl = import.meta.env.PROD 
+    const apiUrl = import.meta.env.PROD
       ? '/api/contact'  // Same domain on Vercel
       : '/api/contact'; // Proxy in development
-    
+
     try {
       const response = await fetch(apiUrl, {
         method: 'POST',
@@ -131,12 +131,12 @@ const Contact = () => {
     try {
       // Create a link element to trigger download
       const link = document.createElement('a');
-      link.href = '/Swayam_Arora_DataAnalyst_Resume.pdf';
-      link.download = 'Swayam_Arora_DataAnalyst_Resume.pdf';
+      link.href = '/Swayam_Arora_Resume.pdf';
+      link.download = 'Swayam_Arora_Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       toast({
         title: "Resume Download",
         description: "Your resume download has started.",
@@ -169,7 +169,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-6 text-foreground">
                 Contact Information
               </h3>
-              
+
               {/* Email */}
               <Card className="glass-card hover-glow p-4 sm:p-6 mb-4">
                 <div className="flex items-center justify-between gap-4">
@@ -257,7 +257,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-6 text-foreground">
                 Send a Message
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="flex flex-col flex-1 min-h-0">
                 <div className="mb-6">
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">

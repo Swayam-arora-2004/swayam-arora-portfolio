@@ -20,15 +20,15 @@ const Hero = () => {
         <div className="text-center animate-fade-in">
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">{" "}
-            <span className="gradient-text">Data Analyst</span>
+            <span className="gradient-text">Data Scientist</span>
             <br />
-            who builds practical{" "}<br/>
+            who builds practical{" "}<br />
             <span className="gradient-text">data products</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            I build dashboards, ML models, and small systems. <br/>Open to work and collaborations.
+            I build dashboards, ML models, and small systems. <br />Open to work and collaborations.
           </p>
 
           {/* CTAs */}
