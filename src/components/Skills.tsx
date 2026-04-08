@@ -5,7 +5,7 @@ const Skills = () => {
   const skillCategories = [
     {
       category: "Programming",
-      skills: ["Python (Pandas, NumPy)", "SQL"],
+      skills: ["Python (Pandas, NumPy)", "SQL", "C++"],
       tier: "primary"
     },
     {
@@ -54,8 +54,8 @@ const Skills = () => {
 
         <div className="grid gap-8">
           {skillCategories.map((category, index) => (
-            <Card 
-              key={category.category} 
+            <Card
+              key={category.category}
               className="glass-card hover-glow p-6 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
