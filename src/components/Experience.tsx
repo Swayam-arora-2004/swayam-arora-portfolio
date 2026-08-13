@@ -6,6 +6,19 @@ const Experience = () => {
   const experiences = [
     {
       company: "MCT India Infotech Pvt. Ltd.",
+      role: "Software Development Engineer in Test (SDET)",
+      period: "June 2026 – Present",
+      location: "Delhi, India",
+      achievements: [
+        "Designing and implementing automated test frameworks for production ML and web systems.",
+        "Building CI/CD pipelines with GitHub Actions to ensure quality gates across deployment stages.",
+        "Developing end-to-end test coverage for API and UI layers, significantly reducing regression risk.",
+        "Collaborating with the engineering team to integrate test automation into the development workflow."
+      ],
+      skills: ["Test Automation", "CI/CD", "GitHub Actions", "Python", "API Testing", "QA Engineering"]
+    },
+    {
+      company: "MCT India Infotech Pvt. Ltd.",
       role: "Intern",
       period: "June 2025 – August 2025",
       location: "Delhi, India",
@@ -36,19 +49,19 @@ const Experience = () => {
       institution: "Manav Rachna University",
       degree: "B.Tech. Computer Science & Technology",
       period: "2022–2026",
-      grade: "CGPA: 7.39"
+      grade: "CGPA: 7.55"
     },
     {
       institution: "Vidya Mandir Public School",
       degree: "Senior Secondary (12th Std)",
       period: "2021–2022",
-      grade: "70%"
+      grade: "69.4%"
     },
     {
       institution: "Vidya Mandir Public School",
       degree: "Secondary (10th Std)",
       period: "2019–2020",
-      grade: "93%"
+      grade: "92%"
     }
   ];
 
@@ -66,7 +79,7 @@ const Experience = () => {
           <div className="space-y-8">
             <h3 className="text-2xl font-bold mb-6 flex items-center">
               <Briefcase className="w-6 h-6 mr-3 text-primary" />
-              Internships & Experience
+              Experience
             </h3>
 
             {experiences.map((exp, index) => (

@@ -10,13 +10,13 @@ const About = () => {
     },
     {
       icon: Database,
-      title: "Data Focus",
-      description: "Python, SQL, Power BI expertise"
+      title: "ML Engineering",
+      description: "PyTorch, MLflow, SHAP, LangChain, Docker"
     },
     {
       icon: MapPin,
-      title: "Willing to Relocate",
-      description: "Open to opportunities worldwide"
+      title: "Open to Remote & On-site Roles",
+      description: "Available for the right opportunity worldwide"
     },
     {
       icon: TrendingUp,
@@ -42,15 +42,15 @@ const About = () => {
                 <div className="space-y-6 text-lg leading-relaxed text-foreground">
                   <p>
                     Hi — I'm <span className="gradient-text font-semibold">Swayam Arora</span>,
-                    an aspiring Data Scientist. I build practical, data-driven solutions using Python, SQL, machine learning, Excel, Power BI, and AI tools, with a focus on solving real business problems.
+                    an ML Engineer & Researcher. I build production ML systems and LLM-powered applications using PyTorch, MLflow, SHAP, LangChain, and Docker — focused on solving real problems with measurable, reproducible outcomes.
                   </p>
 
                   <p>
-                    I have experience working with large datasets (100K+ records), performing EDA, statistical analysis, ML modelling, and dashboard development, along with automating workflows to improve efficiency. My projects span AI-powered ERP systems, customer churn analysis, retail sales insights, and time-series analysis, all centred on measurable outcomes and clean, reproducible code.
+                    I have hands-on experience building end-to-end ML pipelines on large datasets (100K+ records), including EDA, statistical analysis, model development, MLOps tooling, and deployment. My projects include a production-grade Customer Churn MLOps platform (96 tests, CI/CD, SHAP explainability, Docker, live demo), an AI-powered ERP system (LLM APIs, face recognition, ~80% reduction in manual effort), and a Springer/Scopus-indexed research publication (ICICC-2025).
                   </p>
 
                   <p>
-                    I'm currently seeking opportunities in Data Science, Machine Learning, and AI to build scalable, high-impact solutions.
+                    I'm open to the right opportunity in ML Engineering or AI research — ideally working on systems that ship to production.
                   </p>
                 </div>
               </div>

@@ -4,9 +4,9 @@ import { Github, Award, FolderOpen, Eye, Mail } from "lucide-react";
 
 const Hero = () => {
   const kpis = [
-    { icon: Github, label: "GitHub Repos", value: "25+" },
-    { icon: Award, label: "Kaggle Tier", value: "Expert" },
-    { icon: FolderOpen, label: "Projects", value: "15+" },
+    { icon: Github, label: "GitHub Repos", value: "22+" },
+    { icon: Award, label: "Live Deployments", value: "2" },
+    { icon: FolderOpen, label: "Projects", value: "22+" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -20,15 +20,15 @@ const Hero = () => {
         <div className="text-center animate-fade-in">
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">{" "}
-            <span className="gradient-text">Data Scientist</span>
+            <span className="gradient-text">ML Engineer</span>
             <br />
-            who builds practical{" "}<br />
-            <span className="gradient-text">data products</span>
+            who builds production{" "}<br />
+            <span className="gradient-text">AI systems</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            I build dashboards, ML models, and small systems. <br />Open to work and collaborations.
+            I build production ML systems, LLM-powered applications, and research-grade AI. <br />Open to ML Engineering and AI research roles.
           </p>
 
           {/* CTAs */}

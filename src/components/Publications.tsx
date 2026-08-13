@@ -7,7 +7,7 @@ const Publications = () => {
     {
       title: "Optimizing Pharmaceutical Supply Chains: An Intelligent Approach to Sustainable Business Growth",
       status: "Published",
-      publisher: "Springer",
+      publisher: "Springer · Scopus-indexed · ICICC-2025",
       type: "Research Paper",
       icon: FileText,
       url: "https://link.springer.com/chapter/10.1007/978-981-96-7134-2_27"
@@ -17,19 +17,23 @@ const Publications = () => {
   const certifications = [
     {
       title: "Data Analytics with Python",
-      issuer: "NPTEL"
+      issuer: "NPTEL",
+      url: "https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs17/Course/NPTEL25CS17S114520138504283229.pdf"
     },
     {
       title: "Google Analytics",
-      issuer: "Great Learning"
+      issuer: "Great Learning",
+      url: "https://www.mygreatlearning.com/certificate/UVKFGBLA?referrer_code=GLBLCOVFL4FL8"
     },
     {
       title: "Data Engineering Professional Certification",
-      issuer: "Altair RapidMiner"
+      issuer: "Altair RapidMiner",
+      url: "https://ti-user-certificates.s3.amazonaws.com/5733896a-1d71-46e5-b0a3-1ffcf845fe21/393867cc-bc46-46a5-b904-34931e73a26a-swayam-arora-edd0b384-eeba-43bc-a02b-187d007ad2e4-certificate.pdf"
     },
     {
       title: "Data Analyst Skillpath: Zero to Hero in Excel, SQL & Python",
-      issuer: "Udemy"
+      issuer: "Udemy",
+      url: "https://www.udemy.com/certificate/UC-2e8952ff-1ba7-4bf1-bf52-1a36a5aae5a1/"
     }
   ];
 
@@ -45,7 +49,7 @@ const Publications = () => {
       type: "Competition" //4
     },
     {
-      title: "Reached Top 35 (out of 100) at IEEE Hackathon",
+      title: "Reached Top 20 (out of 100) at IEEE WIEHACK 5.0",
       icon: Award,
       type: "Competition" //5 
     },
@@ -91,37 +95,39 @@ const Publications = () => {
             {publications.map((pub, index) => (
               <Card
                 key={index}
-                className="glass-card hover-glow p-6 animate-slide-up"
+                className="glass-card hover-glow p-6 animate-slide-up group"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="flex items-start gap-4">
-                  <pub.icon className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-foreground mb-2 leading-tight">
-                      {pub.title}
-                    </h4>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <Badge variant={pub.status === "Published" ? "default" : "secondary"}>
-                        {pub.status}
-                      </Badge>
-                      <Badge variant="outline" className="glass-card">
-                        {pub.type}
-                      </Badge>
+                <div className="flex items-start justify-between gap-6">
+                  <div className="flex gap-4 items-start">
+                    <pub.icon className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold text-foreground mb-2 leading-tight">
+                        {pub.title}
+                      </h4>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        <Badge variant={pub.status === "Published" ? "default" : "secondary"}>
+                          {pub.status}
+                        </Badge>
+                        <Badge variant="outline" className="glass-card">
+                          {pub.type}
+                        </Badge>
+                      </div>
+                      <p className="text-primary font-medium">
+                        {pub.publisher}
+                      </p>
                     </div>
-                    <p className="text-primary font-medium mb-4">
-                      {pub.publisher}
-                    </p>
-                    {pub.url && (
-                      <a
-                        href={pub.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-medium text-primary hover:text-primary-glow transition-colors gap-2"
-                      >
-                        View Publication <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
                   </div>
+                  {pub.url && (
+                    <a
+                      href={pub.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0 inline-flex items-center text-sm font-medium text-primary hover:text-primary-glow transition-all gap-1.5 glass-card px-4 py-2 rounded-full group-hover:bg-primary/5"
+                    >
+                      View <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
               </Card>
             ))}
@@ -133,12 +139,22 @@ const Publications = () => {
               </h4>
               <div className="grid gap-4">
                 {certifications.map((cert, index) => (
-                  <Card key={index} className="glass-card p-5 hover-glow">
+                  <Card key={index} className="glass-card p-5 hover-glow group">
                     <div className="flex items-center justify-between gap-4">
-                      <div>
-                        <h5 className="font-bold text-foreground mb-1">{cert.title}</h5>
+                      <div className="flex-1">
+                        <h5 className="font-bold text-foreground mb-1 leading-tight">{cert.title}</h5>
                         <p className="text-sm text-primary font-medium">{cert.issuer}</p>
                       </div>
+                      {cert.url && (
+                        <a
+                          href={cert.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-shrink-0 inline-flex items-center text-xs font-medium text-primary hover:text-primary-glow transition-all gap-1.5 glass-card px-3 py-1.5 rounded-full group-hover:bg-primary/5"
+                        >
+                          View <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      )}
                     </div>
                   </Card>
                 ))}

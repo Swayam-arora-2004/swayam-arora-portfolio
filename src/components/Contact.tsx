@@ -164,7 +164,7 @@ const Contact = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Open to work, collaborations, and interesting data projects
+            Open to ML Engineering roles, research collaborations, and AI projects
           </p>
         </div>
 

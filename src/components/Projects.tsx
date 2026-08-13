@@ -30,34 +30,18 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Customer Churn Analysis",
-      tagline: "Predictive Insights for Retention",
+      title: "Customer Churn MLOps Platform",
+      tagline: "Production ML System | CI/CD, Docker, SHAP, Live Demo",
       image: "/churn_analysis.jpg",
-      description: "Conducted a deep-dive analysis into customer behavior patterns to predict churn. Utilized advanced EDA and feature engineering to identify critical risk factors.",
-      techStack: ["Python", "SQL", "Pandas", "Scikit-learn", "EDA"],
+      description: "A fully production-grade MLOps platform for customer churn prediction. Features XGBoost & CatBoost ensemble models tracked via MLflow, SHAP explainability, Flask API served in Docker, 96 automated tests, and a GitHub Actions CI/CD pipeline. Includes a live interactive demo.",
+      techStack: ["Python", "XGBoost", "CatBoost", "MLflow", "SHAP", "Flask", "Docker", "GitHub Actions", "Pandas", "Scikit-learn"],
       githubUrl: "https://github.com/Swayam-arora-2004/Customer-Churn-Prediction",
       demoUrl: "https://example.com",
       caseStudy: {
-        problem: "Increasing customer turnover with no clear understanding of the underlying behavioral drivers or high-risk segments.",
-        approach: "Analyzed 10K+ records using Python. Performed extensive EDA and engineered features to capture multi-dimensional customer interaction patterns.",
-        result: "Identified 3 high-risk customer segments, enabling targeted retention strategies that improved retention by ~15-20%.",
-        learned: "Advanced feature engineering, translating statistical findings into business segments, and the impact of data cleaning on model reliability."
-      }
-    },
-    {
-      id: 3,
-      title: "Retail Sales Analysis",
-      tagline: "Optimizing Product Strategy & ROI",
-      image: "/retail_sales.jpg",
-      description: "Analyzed large-scale retail transaction data to optimize product performance and revenue growth. Focused on SQL optimization for handling large datasets efficiently.",
-      techStack: ["SQL", "Excel", "Python", "Data Analysis"],
-      githubUrl: "https://github.com/Swayam-arora-2004/Retail-Sales-Analysis",
-      demoUrl: "https://example.com",
-      caseStudy: {
-        problem: "Inability to identify top-performing product categories and slow performance of reporting queries on large transaction datasets.",
-        approach: "Analyzed 50K+ transactions using optimized SQL queries. Applied the 80/20 rule to identify revenue-driving segments and visualized trends in Excel.",
-        result: "Identified that the top 10% of products contributed to ~60% of total revenue. Improved query performance by optimizing table joins and indexing.",
-        learned: "SQL query optimization, large-scale data aggregation, and using the Pareto principle for strategic business insights."
+        problem: "High customer churn with no production-grade system for prediction, explainability, or reproducibility across experiments.",
+        approach: "Built an ensemble of XGBoost and CatBoost models, tracked all experiments with MLflow, added SHAP for feature-level explanations, containerised the Flask API in Docker, and set up a GitHub Actions CI/CD pipeline with 96 tests.",
+        result: "Live deployed system with full MLOps lifecycle: reproducible experiments, explainable predictions, automated quality gates, and a publicly accessible demo.",
+        learned: "End-to-end MLOps architecture, SHAP model explainability, Docker containerisation of ML APIs, and GitHub Actions for automated ML testing pipelines."
       }
     }
   ];
@@ -110,7 +94,7 @@ const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of practical data solutions and technical implementations
+            Production ML systems and research-driven AI applications
           </p>
         </div>
 

@@ -4,39 +4,34 @@ import { Badge } from "@/components/ui/badge";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Programming",
-      skills: ["Python (Pandas, NumPy)", "SQL", "C++"],
+      category: "ML & Deep Learning",
+      skills: ["PyTorch", "Scikit-learn", "XGBoost", "CatBoost", "Hugging Face Transformers", "Feature Engineering", "Statistical Modelling"],
       tier: "primary"
     },
     {
-      category: "Data Analysis & Processing",
-      skills: ["Exploratory Data Analysis (EDA)", "Data Cleaning", "Data Wrangling", "Data Preprocessing", "Feature Engineering", "Statistical Analysis"],
+      category: "MLOps & Deployment",
+      skills: ["MLflow", "SHAP", "Docker", "GitHub Actions", "Flask", "FastAPI", "CI/CD Pipelines", "Model Serving"],
       tier: "primary"
+    },
+    {
+      category: "AI / ML Engineering",
+      skills: ["LangChain", "ChromaDB", "LLM API Integration", "RAG Pipelines", "Prompt Engineering", "Agentic Workflows"],
+      tier: "primary"
+    },
+    {
+      category: "Programming & Data",
+      skills: ["Python (Pandas, NumPy)", "SQL", "Exploratory Data Analysis (EDA)", "Data Cleaning", "Data Wrangling", "Data Preprocessing"],
+      tier: "secondary"
+    },
+    {
+      category: "Tools & Infrastructure",
+      skills: ["Git", "Jupyter Notebook", "VS Code", "MySQL", "Data Query Optimisation"],
+      tier: "secondary"
     },
     {
       category: "Visualisation",
-      skills: ["Power BI", "Tableau", "Matplotlib", "Seaborn", "Business Intelligence (BI)", "Dashboard Development"],
-      tier: "primary"
-    },
-    {
-      category: "Tools",
-      skills: ["Advanced Excel", "Git", "Jupyter Notebook", "VS Code"],
+      skills: ["Matplotlib", "Seaborn", "Power BI", "Tableau"],
       tier: "secondary"
-    },
-    {
-      category: "Databases",
-      skills: ["MySQL", "Relational Database Management Systems (RDBMS)", "Data Query Optimisation"],
-      tier: "secondary"
-    },
-    {
-      category: "AI & Productivity",
-      skills: ["AI-assisted Data Analysis", "Prompt Engineering", "Workflow Automation", "Insight Generation using LLMs"],
-      tier: "secondary"
-    },
-    {
-      category: "Soft Skills",
-      skills: ["Data Storytelling", "Business Problem-Solving", "Critical Thinking", "Collaboration", "Time Management"],
-      tier: "accent"
     }
   ];
 
@@ -48,7 +43,7 @@ const Skills = () => {
             Technical <span className="gradient-text">Skills</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive toolkit for data analysis and development
+            ML engineering, MLOps, and AI systems development
           </p>
         </div>
 
